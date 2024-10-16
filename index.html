@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Honkai Star Rail On Browser</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="main">
+      <div class="contain-all-content">
+        <div class="content-1">
+          <div class="contain-name-player"><p class="name-player"></p></div>
+          <div class="contain-input-name">
+            <input
+              placeholder="Input Your Name"
+              class="input-name"
+              type="text"
+              maxlength="15"
+              onkeydown="inputKeyHandler(event)"
+            />
+          </div>
+          <div class="contain-button-name">
+            <button onclick="Start()" class="button-name" disabled>
+              Start
+            </button>
+          </div>
+        </div>
+        <div class="content-2">
+          <div class="contain-box-menu">
+            <div onclick="sMCB(this, 0)" class="box-menu">
+              <img src="img/Chara_Icon.png" alt="" />
+            </div>
+            <div onclick="sMCB(this, 1)" class="box-menu">
+              <img src="img/Battle_Icon.png" alt="" />
+            </div>
+            <div onclick="sMCB(this, 2)" class="box-menu">
+              <img src="img/Warp_Icon.png" alt="" />
+            </div>
+          </div>
+          <div class="contain-bar-more">
+            <div class="contain-bar">
+              <div class="bar-img"><img src="img/guest.png" alt="Guest" /></div>
+              <p class="bar-name">Dontil_Iphone</p>
+              <div class="bar-currency">
+                <img src="img/Item_Star_Rail_Special_Pass.webp" alt="" />
+              </div>
+              <p class="value-currency">20</p>
+            </div>
+            <div class="contain-char-battle-gacha">
+              <div class="character main-content-box">
+                <div class="char-section-1">
+                  <div class="char-flex">
+                    <div class="char" data-char="0">
+                      <img
+                        src="img/CharaIcon/Character_Argenti_Icon.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div class="char" data-char="1">
+                      <img
+                        src="img/CharaIcon/Character_Aventurine_Icon.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div class="char" data-char="2">
+                      <img
+                        src="img/CharaIcon/Character_Bailu_Icon.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div class="char" data-char="3">
+                      <img
+                        src="img/CharaIcon/Character_Bronya_Icon.webp"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="char-flex">
+                    <div class="char" data-char="4">
+                      <img
+                        src="img/CharaIcon/Character_Seele_Icon.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div class="char" data-char="5">
+                      <img
+                        src="img/CharaIcon/Character_Sparkle_Icon.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div class="char" data-char="6">
+                      <img
+                        src="img/CharaIcon/Character_Huohuo_Icon.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div class="char" data-char="7">
+                      <img
+                        src="img/CharaIcon/Character_Welt_Icon.webp"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="char-flex">
+                    <div class="char char9" data-char="8">
+                      <img
+                        src="img/CharaIcon/Character_Pela_Icon.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div class="char char10" data-char="9">
+                      <img
+                        src="img/CharaIcon/Character_Guinaifen_Icon.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div class="char char11" data-char="10">
+                      <img
+                        src="img/CharaIcon/Character_Dan_Heng_Icon.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div class="char char12" data-char="11">
+                      <img
+                        src="img/CharaIcon/Character_March_7th_Icon.webp"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="contain-stats">
+                    <div class="contain-stats2">
+                      <div class="stats"></div>
+                      <div class="stats2"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="char-section-2">
+                  <div class="char-banner-absolute">
+                    <div class="char-banner">
+                      <img
+                        src="img/CharaSplash/Character_Argenti_Splash_Art.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div class="char-banner">
+                      <img
+                        src="img/CharaSplash/Character_Aventurine_Splash_Art.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div class="char-banner">
+                      <img
+                        src="img/CharaSplash/Character_Bailu_Splash_Art.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div class="char-banner">
+                      <img
+                        src="img/CharaSplash/Character_Bronya_Splash_Art.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div class="char-banner">
+                      <img
+                        src="img/CharaSplash/Character_Seele_Splash_Art.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div class="char-banner">
+                      <img
+                        src="img/CharaSplash/Character_Sparkle_Splash_Art.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div class="char-banner">
+                      <img
+                        src="img/CharaSplash/Character_Huohuo_Splash_Art.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div class="char-banner">
+                      <img
+                        src="img/CharaSplash/Character_Welt_Splash_Art.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div class="char-banner">
+                      <img
+                        src="img/CharaSplash/Character_Pela_Splash_Art.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div class="char-banner">
+                      <img
+                        src="img/CharaSplash/Character_Guinaifen_Splash_Art.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div class="char-banner">
+                      <img
+                        src="img/CharaSplash/Character_Dan_Heng_Splash_Art.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div class="char-banner">
+                      <img
+                        src="img/CharaSplash/Character_March_7th_Splash_Art.webp"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="battle main-content-box">
+                <div class="choose-enemy">
+                  <div class="H1-Enemy"><h1>Choose Your Enemy</h1></div>
+                  <div class="enemy-contain">
+                    <div class="enemy-section enemy-section1">
+                      <div onclick="battleStart(this, 0)" class="enemy-flex">
+                        <div class="enemies">
+                          <div class="enemy">
+                            <div class="enemy-icon">
+                              <img
+                                src="img/EnemyIcon/Icon_Enemy_Automaton_Direwolf.webp"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="enemy">
+                            <div class="enemy-icon">
+                              <img
+                                src="img/EnemyIcon/Icon_Enemy_Voidranger_Trampler.webp"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="enemy">
+                            <div class="enemy-icon">
+                              <img
+                                src="img/EnemyIcon/Icon_Enemy_The_Ascended.webp"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="enemy">
+                            <div class="enemy-icon">
+                              <img
+                                src="img/EnemyIcon/Icon_Enemy_Ice_Out_of_Space.webp"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="goBattle" data-goBattle="1">
+                          THE HARD ONE
+                        </div>
+                      </div>
+                      <div onclick="battleStart(this, 1)" class="enemy-flex">
+                        <div class="enemies">
+                          <div class="enemy">
+                            <div class="enemy-icon">
+                              <img
+                                src="img/EnemyIcon/Icon_Enemy_Voidranger_Trampler.webp"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="enemy">
+                            <div class="enemy-icon">
+                              <img
+                                src="img/EnemyIcon/Icon_Enemy_The_Ascended.webp"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="enemy">
+                            <div class="enemy-icon">
+                              <img
+                                src="img/EnemyIcon/Icon_Enemy_Voidranger_Reaver.webp"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="enemy">
+                            <div class="enemy-icon">
+                              <img
+                                src="img/EnemyIcon/Icon_Enemy_Voidranger_Reaver.webp"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="goBattle" data-goBattle="1">
+                          TWO OF THEM
+                        </div>
+                      </div>
+                      <div onclick="battleStart(this, 2)" class="enemy-flex">
+                        <div class="enemies">
+                          <div class="enemy">
+                            <div class="enemy-icon">
+                              <img
+                                src="img/EnemyIcon/Icon_Enemy_Automaton_Direwolf.webp"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="enemy">
+                            <div class="enemy-icon">
+                              <img
+                                src="img/EnemyIcon/Icon_Enemy_Silvermane_Soldier.webp"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="enemy">
+                            <div class="enemy-icon">
+                              <img
+                                src="img/EnemyIcon/Icon_Enemy_Silvermane_Soldier.webp"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="enemy">
+                            <div class="enemy-icon">
+                              <img
+                                src="img/EnemyIcon/Icon_Enemy_Silvermane_Soldier.webp"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="goBattle" data-goBattle="1">THE GUARD</div>
+                      </div>
+                    </div>
+                    <div class="enemy-section enemy-section2">
+                      <div onclick="battleStart(this, 3)" class="enemy-flex">
+                        <div class="enemies">
+                          <div class="enemy">
+                            <div class="enemy-icon">
+                              <img
+                                src="img/EnemyIcon/Icon_Enemy_Entranced_Ingenium_Illumination_Dragonfish.webp"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="enemy">
+                            <div class="enemy-icon">
+                              <img
+                                src="img/EnemyIcon/Icon_Enemy_Entranced_Ingenium_Illumination_Dragonfish.webp"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="enemy">
+                            <div class="enemy-icon">
+                              <img
+                                src="img/EnemyIcon/Icon_Enemy_Entranced_Ingenium_Illumination_Dragonfish.webp"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="enemy">
+                            <div class="enemy-icon">
+                              <img
+                                src="img/EnemyIcon/Icon_Enemy_Entranced_Ingenium_Illumination_Dragonfish.webp"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="goBattle" data-goBattle="1">FULL IWAK</div>
+                      </div>
+                      <div onclick="battleStart(this, 4)" class="enemy-flex">
+                        <div class="enemies">
+                          <div class="enemy">
+                            <div class="enemy-icon">
+                              <img
+                                src="img/EnemyIcon/Icon_Enemy_Baryon.webp"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="enemy">
+                            <div class="enemy-icon">
+                              <img
+                                src="img/EnemyIcon/Icon_Enemy_Baryon.webp"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="enemy">
+                            <div class="enemy-icon">
+                              <img
+                                src="img/EnemyIcon/Icon_Enemy_Windspawn.webp"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="enemy">
+                            <div class="enemy-icon">
+                              <img
+                                src="img/EnemyIcon/Icon_Enemy_Windspawn.webp"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="goBattle" data-goBattle="1">BABY BOO</div>
+                      </div>
+                      <div onclick="battleStart(this, 5)" class="enemy-flex">
+                        <div class="enemies">
+                          <div class="enemy">
+                            <div class="enemy-icon">
+                              <img
+                                src="img/EnemyIcon/Icon_Enemy_Silvermane_Soldier.webp"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="enemy">
+                            <div class="enemy-icon">
+                              <img
+                                src="img/EnemyIcon/Icon_Enemy_Voidranger_Reaver.webp"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="enemy">
+                            <div class="enemy-icon">
+                              <img
+                                src="img/EnemyIcon/Icon_Enemy_Vagrant.webp"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="enemy">
+                            <div class="enemy-icon">
+                              <img
+                                src="img/EnemyIcon/Icon_Enemy_Vagrant.webp"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="goBattle" data-goBattle="1">
+                          THE ALLIANCE
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="contain-prepare">
+                  <div class="prepare-left">
+                    <div class="chara-selection">
+                      <div class="char-selection-flex">
+                        <div class="char-s">
+                          <img
+                            src="img/CharaIcon/Character_Sparkle_Icon.webp"
+                            alt=""
+                          />
+                        </div>
+                        <div class="char-s char-s-4">
+                          <img
+                            src="img/CharaIcon/Character_Pela_Icon.webp"
+                            alt=""
+                          />
+                        </div>
+                        <div class="char-s char-s-4">
+                          <img
+                            src="img/CharaIcon/Character_Guinaifen_Icon.webp"
+                            alt=""
+                          />
+                        </div>
+                        <div class="char-s char-s-4">
+                          <img
+                            src="img/CharaIcon/Character_Dan_Heng_Icon.webp"
+                            alt=""
+                          />
+                        </div>
+                        <div class="char-s char-s-4">
+                          <img
+                            src="img/CharaIcon/Character_March_7th_Icon.webp"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="contain-start-back">
+                      <div class="contain-back-button">
+                        <div
+                          onclick="backToEnemySelection()"
+                          class="back-button"
+                        >
+                          <----
+                        </div>
+                      </div>
+                      <div class="contain-start-button">
+                        <div onclick="startTheBattle()" class="start-button">
+                          ---->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="prepare-mid">
+                    <div class="chara-selected">
+                      <div class="this-char-select img1"></div>
+                      <div class="this-char-select img2"></div>
+                      <div class="this-char-select img3"></div>
+                      <div class="this-char-select img4"></div>
+                    </div>
+                  </div>
+                  <div class="prepare-right">
+                    <div class="enemy-selected">
+                      <div class="this-enemy-select enm1"></div>
+                      <div class="this-enemy-select enm2"></div>
+                      <div class="this-enemy-select enm3"></div>
+                      <div class="this-enemy-select enm4"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="battle-begin"></div>
+              </div>
+              <div class="gacha main-content-box"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="document.js"></script>
+  <script src="script.js"></script>
+  <script src="char.js"></script>
+  <script src="enemy.js"></script>
+  <script src="battleMechanism.js"></script>
+</html>

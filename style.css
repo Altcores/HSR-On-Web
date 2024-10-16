@@ -1,0 +1,743 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  height: 800px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(12, 12, 12);
+  font-family: "Poppins", sans-serif;
+}
+
+.main {
+  position: relative;
+  width: 1200px;
+  height: 750px;
+  background-color: rgb(29, 40, 73);
+  background-image: url(img/Honkai-Star-Rail-1280.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 2.4px solid rgb(210, 210, 210);
+}
+
+.main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity here */
+  z-index: 1;
+}
+
+.contain-all-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*///////////////////////////*/
+/*///////////////////////////*/
+/*//Content 1 Style Is Here//*/
+/*///////////////////////////*/
+/*///////////////////////////*/
+
+.content-1 {
+  position: relative;
+  transition: all 0.5s ease-in-out;
+  opacity: 100%;
+  top: 0px;
+  z-index: 1;
+}
+
+.contain-name-player {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: center;
+  color: aliceblue;
+}
+
+.input-name {
+  width: 200px;
+  padding: 5px;
+  border: 3px solid rgb(17, 17, 18);
+}
+
+.contain-button-name {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+}
+
+.button-name {
+  width: 100px;
+  height: 30px;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+  visibility: hidden;
+}
+
+.button-name:hover {
+  cursor: pointer;
+  color: aliceblue;
+  background-color: rgb(45, 45, 56);
+  transition: all 0.2s ease-in-out;
+}
+
+/*///////////////////////////*/
+/*///////////////////////////*/
+/*//Content 2 Style Is Here//*/
+/*///////////////////////////*/
+/*///////////////////////////*/
+
+.content-2 {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: none;
+  position: absolute;
+  z-index: 2;
+  opacity: 0%;
+  background-color: rgb(25, 28, 38);
+}
+
+/*/////////////////////*/
+/*//Box Menu Is Here//*/
+/*////////////////////*/
+
+.contain-box-menu {
+  transition: all 0.5s ease;
+  position: relative;
+  right: 100px;
+  background-color: rgb(17, 18, 19);
+  width: 120px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 2px solid rgb(255, 255, 255);
+}
+
+.box-menu:nth-child(1) {
+  margin-top: 50px;
+}
+
+.box-menu {
+  position: relative;
+  width: 110px;
+  height: 60px;
+  padding: 5px 0px 5px 0px;
+  margin: 15px 0px 15px 0px;
+  background-color: rgba(55, 61, 110, 0.407);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.box-menu::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: rgb(50, 57, 119); /* Adjust the opacity here */
+  transition: all 0.2s ease-in-out;
+}
+
+.box-menu:hover::before {
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+.box-menu.box-menu-active::before {
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+.box-menu img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/*////////////////*/
+/*//Bar Is Here//*/
+/*///////////////*/
+
+.contain-bar-more {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+}
+
+.contain-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  bottom: 40px;
+  width: 100%;
+  height: 50px;
+  background-color: rgb(17, 18, 19);
+  color: aliceblue;
+  font-family: monospace;
+  transition: all 0.5s ease;
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.bar-img {
+  margin-left: 20px;
+  width: 28px;
+  height: 28px;
+  background-color: aliceblue;
+  border-radius: 100%;
+  border: 2px solid aliceblue;
+}
+
+.bar-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bar-name {
+  width: 130px;
+}
+
+.bar-currency {
+  margin-left: 20px;
+  width: 28px;
+  height: 28px;
+  background-color: aliceblue;
+  border-radius: 100%;
+  border: 2px solid aliceblue;
+}
+
+.bar-currency img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*/////////////////////*/
+/*//Character Is Here//*/
+/*/////////////////////*/
+
+.character,
+.battle,
+.gacha {
+  position: absolute;
+  opacity: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  transition: all 0.5s ease;
+  bottom: 0;
+}
+
+/*//////////////////////////*/
+/*//Char Section 1 Is Here//*/
+/*//////////////////////////*/
+
+.char-section-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 420px;
+  height: 100%;
+}
+
+.contain-bar p {
+  font-size: 14px;
+  margin-left: 10px;
+  margin-bottom: 3.5px;
+  font-weight: 700;
+}
+
+.contain-char-battle-gacha {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.char-flex:nth-child(1) {
+  margin-top: 30px;
+}
+
+.char-flex {
+  display: flex;
+  margin-left: 30px;
+}
+
+.char {
+  cursor: pointer;
+  margin: 10px 10px 10px 10px;
+  width: 60px;
+  border: 1px solid rgb(70, 70, 70);
+  border-top-left-radius: 7px;
+  height: 60px;
+  transition: all 0.2s ease-in-out;
+  background-image: url(img/Rarity_Background_Mini_5.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.char:hover {
+  -webkit-box-shadow: 0px 0px 8px 2px rgb(242, 242, 242);
+  -moz-box-shadow: 0px 0px 8px 2px rgb(242, 242, 242);
+  box-shadow: 0px 0px 8px 2px rgb(242, 242, 242);
+  border: 1px solid rgb(242, 242, 242);
+  transition: all 0.2s ease-in-out;
+}
+
+.char-on {
+  -webkit-box-shadow: 0px 0px 8px 2px rgb(242, 242, 242);
+  -moz-box-shadow: 0px 0px 8px 2px rgb(242, 242, 242);
+  box-shadow: 0px 0px 8px 2px rgb(242, 242, 242);
+  transition: all 0.2s ease-in-out;
+  border: 1px solid rgb(242, 242, 242) !important;
+}
+
+.char9,
+.char10,
+.char11,
+.char12 {
+  background-image: url(img/Rarity_Background_Mini_4.webp);
+}
+.char img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*//////////////////////////*/
+/*//Char Section 2 Is Here//*/
+/*//////////////////////////*/
+
+.char-section-2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.char-banner {
+  display: flex;
+  opacity: 0%;
+  width: 700px;
+  height: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 300px;
+  transition: all 0.5s ease;
+}
+
+.char-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contain-stats {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  color: aliceblue;
+}
+
+.contain-stats2 {
+  margin-top: 12px;
+  display: flex;
+  width: 100%;
+  height: 200px;
+  background-color: rgb(24, 22, 22);
+  margin-left: 28px;
+  padding-left: 12px;
+  padding-top: 10px;
+  border-radius: 9px;
+}
+
+.stats {
+  width: 100%;
+  height: 100%;
+}
+
+.stats2 {
+  width: 100%;
+  height: 100%;
+  margin-top: 36px;
+}
+
+.stats p {
+  font-size: 14px;
+  font-family: "Golos", sans-serif;
+  margin-top: 10px;
+  width: 100px;
+}
+
+.stats2 p {
+  font-size: 14px;
+  font-family: "Golos", sans-serif;
+  margin-top: 10px;
+}
+
+/*//////////////////*/
+/*//Battle Is Here//*/
+/*//////////////////*/
+
+.battle {
+  background-color: rgb(25, 28, 38);
+  visibility: hidden;
+  bottom: -44.1rem;
+}
+
+/*/////////////////*/
+/*//Enemy Is Here//*/
+/*/////////////////*/
+
+.choose-enemy {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: all 0.4s ease;
+  z-index: 3;
+}
+
+.H1-Enemy {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 80px;
+  color: rgb(240, 240, 240);
+  font-family: "Poppins", sans-serif;
+}
+
+.enemy-contain {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.enemy-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 50%;
+  height: 100%;
+  transition: all 0.4s ease;
+}
+
+.enemy-section1 {
+  right: 0;
+}
+
+.enemy-section2 {
+  left: 0;
+}
+
+.enemy-flex {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 500px;
+  height: 150px;
+  margin: 20px 0px 20px 0px;
+  background-color: rgb(229, 222, 212);
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  border: 3px solid rgb(0, 0, 0);
+  border-bottom: 3px solid rgba(0, 0, 0, 0);
+  transition: all 0.2s ease;
+}
+
+.enemy-flex:hover {
+  border: 3px solid rgb(71, 68, 133);
+  -webkit-box-shadow: 0px 0px 4px 2px rgb(242, 242, 242);
+  -moz-box-shadow: 0px 0px 4px 2px rgb(242, 242, 242);
+  box-shadow: 0px 0px 4px 2px rgb(242, 242, 242);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.enemies {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.enemy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 125px;
+}
+
+.goBattle {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(32, 32, 32);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.enemy-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+  background-color: rgb(42, 47, 47);
+  border-radius: 100%;
+}
+
+.enemy-icon img {
+  width: 95%;
+  height: 95%;
+  object-fit: cover;
+}
+
+.contain-prepare {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  display: flex;
+  opacity: 0;
+  z-index: 2;
+  transition: all 0.4s ease;
+}
+
+.prepare-left {
+  position: relative;
+  display: flex;
+  width: 50%;
+  height: 100%;
+  flex-direction: column;
+  background-color: rgb(24, 22, 22);
+  border-right: 2px solid rgb(255, 255, 255);
+}
+
+.chara-selection {
+  display: flex;
+  padding: 15px 0px 15px 0px;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.char-selection-flex {
+  display: flex;
+}
+
+.char-s {
+  cursor: pointer;
+  margin: 10px 10px 10px 10px;
+  width: 80px;
+  border: 1px solid rgb(70, 70, 70);
+  border-top-left-radius: 7px;
+  height: 80px;
+  transition: all 0.2s ease-in-out;
+  background-image: url(img/Rarity_Background_Mini_5.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.char-s:hover {
+  -webkit-box-shadow: 0px 0px 25px 1px rgb(242, 242, 242);
+  -moz-box-shadow: 0px 0px 25px 1px rgb(242, 242, 242);
+  box-shadow: 0px 0px 8px 2px rgb(242, 242, 242);
+  border: 1px solid rgb(242, 242, 242);
+  transition: all 0.2s ease-in-out;
+}
+
+.char-s-4 {
+  background-image: url(img/Rarity_Background_Mini_4.webp);
+}
+
+.char-s img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contain-start-back {
+  display: flex;
+  width: 100%;
+  height: 100px;
+}
+
+.contain-back-button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%;
+  height: 100px;
+}
+
+.contain-start-button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 50%;
+  height: 100px;
+}
+
+.back-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  height: 30px;
+  border-radius: 4px;
+  font-size: 20px;
+  background-color: aliceblue;
+  color: black;
+  font-weight: 800;
+  cursor: pointer;
+  margin-left: 22px;
+}
+
+.start-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  height: 30px;
+  border-radius: 4px;
+  font-size: 20px;
+  background-color: aliceblue;
+  color: black;
+  font-weight: 800;
+  cursor: pointer;
+  margin-right: 22px;
+}
+
+.prepare-mid {
+  width: 25%;
+  height: 100%;
+  border-right: 2px solid #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.chara-selected {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.this-char-select {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 25%;
+  transition: all 0.2s ease-in-out !important;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.this-char-select img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  border-radius: 15px;
+  background-color: rgb(217, 237, 255);
+}
+
+.prepare-right {
+  width: 25%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.enemy-selected {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.this-enemy-select {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 25%;
+}
+
+.this-enemy-select img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  border-radius: 15px;
+  background-color: rgb(217, 237, 255);
+}
+
+.battle-begin {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  display: flex;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+/*/////////////////*/
+/*//Gacha Is Here//*/
+/*/////////////////*/
+
+.gacha {
+  background-color: rgb(255, 51, 0);
+  visibility: hidden;
+  bottom: -88.2rem;
+}

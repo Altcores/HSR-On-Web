@@ -1,0 +1,33 @@
+Menggabungkan file style sebelum deploy
+
+Ketika Anda akan mendeploy prototype ke browser, menggabungkan file style menjadi satu file dapat membantu meningkatkan performa dan mengurangi jumlah request HTTP. Anda dapat menggunakan teknik seperti:
+
+CSS concatenation: Menggabungkan semua file style menjadi satu file menggunakan teknik seperti Gulp atau Webpack.
+CSS minification: Mengurangi ukuran file style dengan menghilangkan karakter yang tidak perlu dan menggabungkan kode yang serupa.
+Dengan cara ini, Anda dapat mempertahankan kelebihan dari memisahkan style di berbagai file selama pengembangan, dan juga meningkatkan performa dan mengurangi kompleksitas pengelolaan ketika mendeploy ke browser.
+
+Jadi, cara Anda sebenarnya cukup bagus!
+
+Bagaimana cara membuat Gulp bekerja pada website online?
+
+Untuk membuat Gulp bekerja pada website online, Anda perlu melakukan beberapa langkah:
+
+Gunakan Gulp pada tahap pengembangan: Gunakan Gulp pada tahap pengembangan untuk melakukan tugas-tugas otomatisasi, seperti menggabungkan file CSS, mengompresi gambar, dan lain-lain.
+Buat file bundle: Setelah Anda selesai menggunakan Gulp, buat file bundle yang berisi hasil dari tugas-tugas otomatisasi tersebut.
+Unggah file bundle ke server: Unggah file bundle ke server web yang akan digunakan untuk menerbitkan website Anda.
+Konfigurasi server: Konfigurasi server web untuk menggunakan file bundle yang telah Anda unggah.
+Dengan cara ini, Anda dapat membuat Gulp bekerja pada website online, tetapi Anda perlu melakukan beberapa langkah tambahan untuk membuatnya bekerja.
+
+Alternatif lain
+
+Jika Anda tidak ingin menggunakan Gulp pada tahap pengembangan, Anda dapat menggunakan alternatif lain seperti:
+
+Webpack: Webpack adalah sebuah tool yang dapat digunakan untuk melakukan tugas-tugas otomatisasi pada proyek web, termasuk menggabungkan file CSS, mengompresi gambar, dan lain-lain.
+Rollup: Rollup adalah sebuah tool yang dapat digunakan untuk melakukan tugas-tugas otomatisasi pada proyek web, termasuk menggabungkan file CSS, mengompresi gambar, dan lain-lain.
+Kedua tool tersebut dapat digunakan pada tahap pengembangan dan dapat diintegrasikan dengan server web untuk membuat website online.
+
+
+
+
+
+
