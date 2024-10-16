@@ -27,6 +27,7 @@ const H1Enemy = document.querySelector(".H1-Enemy");
 const prepareContain = document.querySelector(".contain-prepare");
 const charS = document.querySelectorAll(".char-s");
 const charaSelected = document.querySelector(".chara-selected");
+const isMobile = window.innerWidth < 768; // or window.innerHeight < 600
 
 const images = document.querySelectorAll("img");
 images.forEach((image) => {
