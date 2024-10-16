@@ -12,20 +12,21 @@ namePlayer.innerHTML = "";
 
 function inputKeyHandler(event) {
   let keyEvent = event.key;
-
-  if (keyEvent === "Backspace") {
-    namePlayer.innerHTML = namePlayer.innerHTML.slice(0, -1);
-  }
+  console.log(keyEvent);
 
   if (containAbjad.includes(keyEvent)) {
-    namePlayer.innerHTML += keyEvent;
+    namePlayer.innerHTML = `${inputName.value}`;
+  }
+
+  if (keyEvent === "Backspace") {
+    namePlayer.innerHTML = `${inputName.value}`;
   }
 
   if (namePlayer.innerHTML.length > 15) {
     namePlayer.innerHTML = namePlayer.innerHTML.slice(0, 15);
   }
 
-  if (namePlayer.innerHTML === "") {
+  if (inputName.value === "") {
     buttonName.disabled = true;
     buttonName.style.visibility = "hidden";
   } else {
